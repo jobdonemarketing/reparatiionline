@@ -44,7 +44,7 @@
       color: #0B1E3A;
     }
     .logo span {
-      color: #16A34A; /* green for repair/trust */
+      color: #16A34A;
     }
 
     .nav-links {
@@ -219,128 +219,91 @@
       font-weight: 600;
     }
 
-    /* ===== FOOTER STYLES (adapted to match site design) ===== */
-    footer {
-      border-top: 1px solid #E2E8F0;
-      margin-top: 60px;
-      padding: 40px 0 20px;
-      color: #1a1a2e;
-    }
-
-    .footer-top {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px 20px;
-      border-bottom: 1px solid #E2E8F0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem 2rem;
-    }
-
-    .footer-top p {
-      font-size: 0.95rem;
-      color: #4A5568;
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    .footer-top p strong {
-      color: #0B1E3A;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1rem;
+    /* ===== FOOTER – Minimal, elegant ===== */
+    .site-footer {
+      padding: 36px 0 24px;
+      background: #f8f9fa;
+      color: #5a6a85;
       font-size: 0.9rem;
-      color: #718096;
+      border-top: 1px solid #e9edf4;
+      margin-top: 60px;
     }
 
-    .footer-links a {
-      color: #718096;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: #16A34A;
-    }
-
-    .footer-bottom {
+    .footer-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1.5rem 24px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem 1.5rem;
-    }
-
-    .footer-project {
-      flex: 1 1 280px;
-    }
-
-    .footer-project .project-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #9CA3AF;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-    }
-
-    .footer-project .company-name {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #0B1E3A;
-    }
-
-    .footer-project .company-name .year {
-      font-weight: 400;
-      color: #9CA3AF;
-    }
-
-    .footer-contact {
-      flex: 1 1 340px;
+      padding: 0 24px;
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: #1a1a2e;
+      align-items: center;
+      gap: 20px;
     }
 
-    .footer-contact .contact-item {
+    .footer-nav {
       display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+      font-size: 0.85rem;
     }
 
-    .footer-contact .contact-item .label {
-      color: #9CA3AF;
-      font-weight: 450;
-      min-width: 48px;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+    .footer-nav a {
+      color: #5a6a85;
+      transition: color 0.25s ease;
+      text-decoration: none;
     }
 
-    .footer-contact .contact-item .value {
-      color: #1a1a2e;
-      word-break: break-word;
-    }
-
-    .footer-contact .contact-item .value a {
+    .footer-nav a:hover {
       color: #16A34A;
+    }
+
+    .footer-copy {
+      font-size: 0.95rem;
+      color: #5a6a85;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-copy a {
+      color: #0B1E3A;
+      font-weight: 600;
+      transition: color 0.25s ease;
       text-decoration: none;
       border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
     }
 
-    .footer-contact .contact-item .value a:hover {
+    .footer-copy a:hover {
+      color: #16A34A;
       border-bottom-color: #16A34A;
+    }
+
+    .footer-copy .ampersand {
+      color: #b0b8c5;
+      font-weight: 300;
+      margin: 0 4px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-nav {
+        gap: 6px 14px;
+        font-size: 0.8rem;
+      }
+      .footer-copy {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .site-footer {
+        padding: 28px 0 18px;
+      }
+      .footer-nav {
+        gap: 4px 10px;
+        font-size: 0.75rem;
+      }
+      .footer-copy {
+        font-size: 0.8rem;
+      }
     }
 
     @media (max-width: 768px) {
@@ -369,26 +332,6 @@
       }
       .grid-2 {
         grid-template-columns: 1fr;
-      }
-
-      .footer-top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .footer-contact .contact-item .label {
-        min-width: 40px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .footer-contact {
-        font-size: 0.85rem;
       }
     }
   </style>
@@ -542,43 +485,22 @@
       <p style="margin-top: 15px; font-size: 0.9rem; color: #4A5568;">Or contact us directly at <a href="mailto:hello@reparatii.online">hello@reparatii.online</a></p>
     </section>
 
-    <!-- ========== FOOTER ========== -->
-    <footer>
-      <!-- ⬆️ reparatii.online info (top) -->
-      <div class="footer-top">
-        <p><strong>reparatii.online</strong> — Trust. Verified. Reliable. <br> The go‑to directory for audited repair services.</p>
-        <div class="footer-links">
-          <a href="#">Despre noi</a>
-          <a href="#">Confidențialitate</a>
-          <a href="#">Termeni</a>
-          <a href="#">Contact</a>
-        </div>
-      </div>
-
-      <!-- ⬇️ Job Done Marketing LLC (bottom) -->
-      <div class="footer-bottom">
-        <div class="footer-project">
-          <div class="project-label">This is a project of:</div>
-          <div class="company-name">
-            Job Done Marketing LLC
-            <span class="year">© 2026</span>
-          </div>
-        </div>
-        <div class="footer-contact">
-          <div class="contact-item">
-            <span class="label">Office</span>
-            <span class="value">1209 Mountain Road Pl NE, Ste N, Albuquerque, NM 87110, USA</span>
-          </div>
-          <div class="contact-item">
-            <span class="label">Fax</span>
-            <span class="value">+1 202-235-8439</span>
-          </div>
-          <div class="contact-item">
-            <span class="label">Email</span>
-            <span class="value">
-              <a href="mailto:jobdonemarketing@proton.me">jobdonemarketing@proton.me</a>
-            </span>
-          </div>
+    <!-- ===== FOOTER – Minimal, elegant ===== -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <nav class="footer-nav">
+          <a href="#how">How it works</a>
+          <a href="#for-business">For businesses</a>
+          <a href="#about">About</a>
+          <a href="#apply">Get listed</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </nav>
+        <div class="footer-copy">
+          © 2026
+          <a href="https://reparatii.online" target="_blank" rel="noopener">reparatii.online</a>
+          <span class="ampersand">&amp;</span>
+          <a href="https://jobdone.marketing" target="_blank" rel="noopener">Job Done Marketing</a>
         </div>
       </div>
     </footer>
